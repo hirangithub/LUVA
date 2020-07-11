@@ -1,6 +1,6 @@
 html,
 body,
-.view {
+.home-page .view {
   height: 100%;
 }
 
@@ -14,6 +14,11 @@ ul {
     list-style-type: none;
 }
 
+hr {
+    border-color: rgba(255,255,255,.2);
+    margin-bottom: 2.5rem;
+}
+
 h1,
 h2,
 h3 {    
@@ -21,6 +26,7 @@ h3 {
 }
 
 .btn {
+    text-transform: none;    
     @media only screen and (min-width: 1440px) {
         padding: 1.4rem 2rem !important;
         font-size: 1rem;
@@ -31,5 +37,48 @@ h3 {
     }
 }
 
+.light-blue-text {
+    color: $orange !important;
+}
 
   
+.navbar {
+    box-shadow: none;
+    background-color: $default !important;
+    font-size: 1rem;
+    .active a {
+        border-bottom: 2px solid $orange !important;
+    }
+    &.top-nav-collapse {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    }
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.navbar-brand {
+    margin-right: 2rem;
+}
+.navbar-toggler {
+    @media only screen and (max-width: 990px) {
+        padding: 0;
+    }
+}
+
+.top-nav-collapse,
+.navbar:not(.top-nav-collapse) {
+    @media only screen and (max-width: 990px) {
+        background-color: $default !important;
+    }
+}
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 990px) {
+    .navbar {
+        background-color: $default !important; 
+    } 
+}
+
+.home-page .navbar {
+    background-color: transparent !important;
+}

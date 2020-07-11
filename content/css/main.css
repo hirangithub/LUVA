@@ -51,7 +51,7 @@ Mixin to includes vendor specific prefixes for box-shadow
 */
 html,
 body,
-.view {
+.home-page .view {
   height: 100%;
 }
 
@@ -66,10 +66,19 @@ ul {
   list-style-type: none;
 }
 
+hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 2.5rem;
+}
+
 h1,
 h2,
 h3 {
   padding-bottom: 1rem;
+}
+
+.btn {
+  text-transform: none;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -84,14 +93,46 @@ h3 {
   border-color: #DC623A !important;
 }
 
+.light-blue-text {
+  color: #DC623A !important;
+}
+
 .navbar {
   -webkit-box-shadow: none;
           box-shadow: none;
-  background-color: transparent;
+  background-color: #282C2B !important;
+  font-size: 1rem;
 }
 
-.top-nav-collapse {
-  background-color: #282C2B !important;
+.navbar .active a {
+  border-bottom: 2px solid #DC623A !important;
+}
+
+.navbar.top-nav-collapse {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 990px) {
+  .navbar-toggler {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .top-nav-collapse,
+  .navbar:not(.top-nav-collapse) {
+    background-color: #282C2B !important;
+  }
 }
 
 /* Adding color to the Navbar on mobile */
@@ -99,6 +140,10 @@ h3 {
   .navbar {
     background-color: #282C2B !important;
   }
+}
+
+.home-page .navbar {
+  background-color: transparent !important;
 }
 
 .carousel {
@@ -114,8 +159,57 @@ h3 {
   height: 100%;
 }
 
+.carousel .flex-active {
+  width: 100%;
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1440px) {
+  .carousel .flex-active {
+    padding: 5rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .flex-active {
+    padding: 5rem 2rem;
+  }
+}
+
+.carousel .flex-active .items {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .flex-active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 6rem 2rem;
+  }
+}
+
+@media (orientation: landscape) {
+  .carousel .flex-active {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-top: 10rem;
+  }
+}
+
 .carousel .carousel-indicators {
-  right: 1rem;
+  right: 2rem;
   left: auto;
   top: 50%;
   display: block;
@@ -138,9 +232,29 @@ h3 {
   margin-bottom: 0;
 }
 
-.carousel .carousel-item .product-detail-holder {
-  width: 70%;
-  margin-left: 2rem;
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-indicators {
+    top: 5.3rem;
+    right: 1rem;
+  }
+}
+
+.carousel .carousel-item .product-detail-holder .inner {
+  padding-right: 5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .carousel-item .product-detail-holder .inner {
+    padding-right: 0;
+    padding-top: 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-item .product-detail-holder .inner {
+    padding-right: 0;
+    padding-top: 0;
+  }
 }
 
 .carousel .carousel-item .product-detail-holder h2.num {
@@ -159,15 +273,35 @@ h3 {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-item .product-detail-holder h2.num {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .carousel .carousel-item .product-detail-holder h1 {
   font-size: 3.6rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 @media only screen and (max-width: 1440px) {
   .carousel .carousel-item .product-detail-holder h1 {
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-item .product-detail-holder h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  .carousel .carousel-item .product-detail-holder h1 {
+    font-size: 2rem;
+    font-weight: normal;
   }
 }
 
@@ -181,35 +315,47 @@ h3 {
   }
 }
 
-.carousel .carousel-item .product-detail-holder .btn {
-  position: static;
-}
-
-@media only screen and (max-width: 1440px) {
-  .carousel .carousel-item .product-detail-holder .btn {
-    position: absolute;
-    bottom: 1rem;
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-item .product-detail-holder ul {
+    display: none;
   }
 }
 
-.carousel .carousel-item .product-holder {
-  position: absolute;
-  right: 5%;
-  bottom: -2rem;
-  width: 45%;
-  height: auto;
+@media only screen and (max-width: 1024px) {
+  .carousel .carousel-item .product-detail-holder .btn {
+    display: inline-block !important;
+  }
 }
 
-@media only screen and (max-width: 1440px) {
-  .carousel .carousel-item .product-holder {
-    width: 42%;
-    bottom: -1rem;
-    right: 3%;
+@media only screen and (max-width: 800px) {
+  .carousel .carousel-item .product-detail-holder .btn {
+    display: block;
   }
 }
 
 .carousel .carousel-item .product-holder img {
   width: 100%;
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .carousel .carousel-item .product-holder img {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel .carousel-item .product-holder img {
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .carousel .view .mask {
+    -webkit-box-align: unset !important;
+        -ms-flex-align: unset !important;
+            align-items: unset !important;
+  }
 }
 
 aside {
@@ -217,6 +363,19 @@ aside {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 28px 30px;
-  padding: 2.8rem 3rem;
+  padding: 10px 20px;
+  padding: 1rem 2rem;
+  font-size: .8rem;
+  padding-top: 2.2rem;
+  opacity: .5;
+}
+
+@media only screen and (max-width: 990px) {
+  aside {
+    display: none;
+  }
+}
+
+main {
+  padding-top: 7rem;
 }
