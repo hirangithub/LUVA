@@ -1,0 +1,54 @@
+/* Font type: Rubik Font - Google */
+$font-path: '../fonts';  
+
+@font-face {
+    font-family: 'Rubik Light';
+    src: url(#{$font-path}/rubik-light-webfont.woff2) format('woff2'), 
+         url(#{$font-path}/rubik-light-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Regular';
+    src: url(#{$font-path}/rubik-regular-webfont.woff2) format('woff2'), 
+         url(#{$font-path}/rubik-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Medium';
+    src: url(#{$font-path}/rubik-medium-webfont.woff2) format('woff2'), 
+         url(#{$font-path}/rubik-medium-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url(#{$font-path}/rubik-bold-webfont.woff2) format('woff2'), 
+         url(#{$font-path}/rubik-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// @font-face {
+//   font-family: 'Glyphicons Halflings';
+//   src: url(#{$font-path}/glyphicons-halflings-regular.eot);
+//   src: url(#{$font-path}/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
+//        url(#{$font-path}/glyphicons-halflings-regular.woff2) format('woff2'),
+//        url(#{$font-path}/glyphicons-halflings-regular.woff) format('woff'),
+//        url(#{$font-path}/glyphicons-halflings-regular.ttf) format('truetype'),
+//        url(#{$font-path}/glyphicons-halflings-regular.svg#HelveticaNeueLTStd-Lt) format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+$font-light: 'Rubik Light';
+$font-regular: 'Rubik Regular';
+$font-medium: 'Rubik Medium';
+$font-bold: 'Rubik Bold';
+

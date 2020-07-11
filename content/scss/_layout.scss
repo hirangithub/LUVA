@@ -1,0 +1,122 @@
+.navbar {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: $default !important;
+}
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 990px) {
+    .navbar {
+        background-color: $default !important; 
+    } 
+}
+
+
+.carousel {
+    height: 100%;
+    .carousel-inner {
+        height: 100%;
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+    }
+}
+
+.carousel {
+    .carousel-indicators {
+        right: 1rem;
+        left: auto;
+        top: 50%;
+        display: block;
+        margin: 0;
+        li {
+            width: .5rem;
+            height: .5rem;
+            border: 2px solid $default;
+            margin-bottom: 1rem;
+            &.active {
+                background-color: transparent;
+                border: 2px solid $orange;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .carousel-item {
+        .product-detail-holder {
+            width: 70%;
+            margin-left: 2rem;
+            @media only screen and (max-width: 1440px) {
+                //width: 65%;
+            }            
+            h2 {                
+                &.num {
+                    font-weight: bold;
+                    padding-right: 5rem;
+                    margin-bottom: 2rem;
+                    color: $orange;
+                    font-size: 4rem;
+                    border-bottom: 1px solid $gray-v2;
+                    display: inline-block;
+                    @media only screen and (max-width: 1440px) {
+                        font-size: 3rem;
+                    }  
+                }
+            }
+            h1 {
+                font-size: 3.6rem;
+                padding-bottom: 2rem;
+                @media only screen and (max-width: 1440px) {
+                    font-size: 2.5rem;
+                    padding-bottom: 1rem;
+                }
+            }
+            ul {
+                li {
+                    padding-bottom: 2rem;
+                    @media only screen and (max-width: 1440px) {
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+            .btn {
+                position: static;
+                @media only screen and (max-width: 1440px) {
+                    position: absolute;
+                    bottom: 1rem;
+                }
+            }
+        }
+        .product-holder {
+            position: absolute;
+            right: 5%;
+            bottom: -2rem;
+            width: 45%;
+            height: auto;            
+            @media only screen and (max-width: 1440px) {
+                width: 42%;
+                bottom: -1rem;
+                right: 3%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }    
+}
+
+
+
+
+
+aside {
+    background-color: $dark;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    @include rems(padding, 2.8, 3);
+}
