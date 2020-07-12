@@ -32,31 +32,7 @@
             flex-direction: row;
             padding-top: 10rem;
         }
-    }
-    .carousel-indicators {
-        right: 2rem;
-        left: auto;
-        top: 50%;
-        display: block;
-        margin: 0;
-        li {
-            width: .5rem;
-            height: .5rem;
-            border: 2px solid $default;
-            margin-bottom: 1rem;
-            &.active {
-                background-color: transparent;
-                border: 2px solid $orange;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        @media only screen and (max-width: 800px) {
-            top: 5.3rem;  
-            right: 1rem; 
-        }
-    }
+    }    
     .carousel-item {
         .product-detail-holder {
             .inner {
@@ -126,7 +102,7 @@
         .product-holder {
             img {
                 width: 100%;
-                margin-top: 6rem;
+                margin-top: 4rem;
                 @media only screen and (max-width: 1440px) {
                     margin-top: 0;
                 }
@@ -141,6 +117,28 @@
             align-items: unset !important;
         }
     }   
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width: 5%;
+    }
+    .carousel-indicators {
+        li {
+            width: .5rem;
+            height: .5rem;
+            border: 2px solid $default;
+            margin-bottom: 1rem;
+            &.active {
+                background-color: transparent;
+                border: 2px solid $orange;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media only screen and (max-width: 800px) {
+            top: 5rem; 
+        }
+    }
 }
 
 aside {
