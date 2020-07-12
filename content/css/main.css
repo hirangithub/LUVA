@@ -1,54 +1,3 @@
-/*
-Font Size mixin, produces rem and px units for font-size and line-height
-e.g. @include font-size(1.4, 1.8);
-compiles to
-    font-size: 14px;
-    line-height: 18px;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-*/
-/*
-Rem sizing mixin, produces rem and px units for any value
-e.g. @include rems(margin, 1);
-compiles to
-    margin: 10px;
-    margin: 1rem;
-
-e.g. @include rems(margin, 2, 1);
-compiles to
-    margin: 20px 10px;
-    margin: 2rem 1rem;
-
-e.g. @includes rems(margin, 2, 1, 0);
-compiles to
-    margin: 20px 10px 0;
-    margin: 2rem 1rem 0;
-
-e.g. @includes rems(margin, 4, 3, 2, 1);
-compiles to
-    margin: 40px 30px 20px 10px;
-    margin: 4rem 3rem 2rem 1rem;
-*/
-/*
-Opacity mixin including vendor specific prefixes for opacity values
-e.g. @include opacity(0.8);
-compiles to
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-*/
-/*
-Mixin for clearing floated elements before closing the parent
-*/
-/*
-Mixin to includes vendor specific prefixes for
-  box-sizing: border-box;
-*/
-/*
-Mixin to includes vendor specific prefixes for border-radius
-*/
-/*
-Mixin to includes vendor specific prefixes for box-shadow
-*/
 html,
 body,
 .home-page .view {
@@ -61,8 +10,7 @@ body {
 }
 
 ul {
-  padding: 0px;
-  padding: 0rem;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -397,7 +345,6 @@ aside {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 10px 20px;
   padding: 1rem 2rem;
   font-size: .8rem;
   padding-top: 2.2rem;
